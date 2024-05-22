@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&family=Work+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1363df;
+  --primary-light: #47b5ff;
+  --bg-dark: #06283d;
+  --bg-light: #dff6ff;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Global Styles */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar .nav {
+  display: none;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.navbar .nav a {
+  color: #fff;
+}
+
+.navbar .nav a:hover {
+  color: var(--primary-color);
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.social-menu {
+  display: none;
+  gap: 1rem;
+  padding: 0 20px;
+  font-size: 1.2rem;
+}
+
+.social-menu a {
+  color: #fff;
+}
+
+.social-menu a:hover {
+  color: var(--primary-color);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  right: 2rem;
+  top: 80px;
+  width: 90%;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+  height: 360px;
+}
+
+.dropdown-menu .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+}
+
+.dropdown-menu .nav a,
+.dropdown-menu .social-menu a {
+  color: var(--primary-light);
+}
+
+.dropdown-menu .nav a:hover,
+.dropdown-menu .social-menu a:hover {
+  color: var(--primary-color);
+}
+
+.dropdown-menu .social-menu {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  min-height: 40vh;
+  background: url("./assets/orchester.jpg") rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding: 10px;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero h3 {
+  font-size: 1rem;
+  margin-top: 5rem;
+  color: var(--primary-light);
+}
+
+.hero span {
+  display: none;
+}
+
+.hero p {
+  display: none;
+}
+
+.hero .hero_btn {
+  width: 120px;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: 0.2s ease;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+.hero .hero_btn:hover {
+  background-color: var(--primary-light);
+}
+
+@media (min-width: 576px) {
+  .dropdown-menu {
+    width: 300px;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero h3 {
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .hero span {
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: var(--primary-light);
+  }
+
+  .hero p {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .toggle_btn {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+  .social-menu {
+    display: flex;
+  }
+
+  .navbar .nav {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero h3 {
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+
+  .hero span {
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: var(--primary-light);
+  }
+
+  .hero p {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+  }
+}
