@@ -288,31 +288,33 @@ header {
   margin-bottom: 1rem;
 }
 
-.numbers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+.counter-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 4rem;
+  position: relative;
+  margin-top: 2rem;
 }
 
-.numbers .counter {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+.counter {
+  text-align: center;
+  position: relative;
 }
 
-.numbers .counter div {
-  border: 1px solid #fff;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.counter::before {
+  position: absolute;
+  content: "";
+  bottom: -2rem;
+  left: 50%;
+  width: 20%;
+  height: 0.2rem;
+  background: var(--primary-light);
+  transform: translateX(-50%);
+}
+
+.count {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
@@ -364,6 +366,10 @@ header {
 
   .dirigent .container {
     display: flex;
+  }
+
+  .counter-wrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -462,8 +468,24 @@ header {
     align-self: center;
   }
 
-  .dirigent {
+  .dirigent,
+  .facts .container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .facts h3,
+  .facts p {
+    text-align: center;
+  }
+
+  .counter-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1200px;
+    margin: 2.5rem auto;
+  }
+
+  .count {
+    font-size: 3rem;
   }
 }
