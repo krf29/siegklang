@@ -41,6 +41,20 @@ section {
   padding-bottom: 50px;
 }
 
+img {
+  width: 100%;
+}
+
+.btn {
+  width: 120px;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
 /* Header */
 header {
   position: absolute;
@@ -189,19 +203,24 @@ header {
   display: none;
 }
 
-.hero .hero_btn {
-  width: 120px;
-  padding: 15px 30px;
-  background-color: var(--primary-color);
-  border-radius: 10px;
-  transition: 0.2s ease;
-  color: #fff;
-  cursor: pointer;
-  margin: 1rem 0;
+/* WELCOME SECTION */
+
+.welcome {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.hero .hero_btn:hover {
-  background-color: var(--primary-light);
+.welcome img {
+  display: none;
+}
+
+.welcome h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.welcome p {
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -235,6 +254,19 @@ header {
     display: block;
     margin-top: 1rem;
     margin-bottom: 1.8rem;
+  }
+
+  .welcome {
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    gap: 10px;
+  }
+
+  .welcome img {
+    display: block;
+    width: 50%;
+    object-fit: cover;
   }
 }
 
@@ -287,5 +319,10 @@ header {
     margin-top: 2rem;
     margin-bottom: 3rem;
     font-size: 1.2rem;
+  }
+
+  .welcome {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
