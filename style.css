@@ -37,8 +37,7 @@ li {
 }
 
 section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 50px 10px;
 }
 
 img {
@@ -46,13 +45,13 @@ img {
 }
 
 .btn {
-  width: 120px;
+  display: block;
   padding: 15px 30px;
   background-color: var(--primary-color);
   border-radius: 10px;
   color: #fff;
   cursor: pointer;
-  margin: 1rem 0;
+  margin: 0.8rem 0;
 }
 
 /* Header */
@@ -180,7 +179,6 @@ header {
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  padding: 10px;
 }
 
 .hero h1 {
@@ -203,12 +201,11 @@ header {
   display: none;
 }
 
-/* WELCOME SECTION */
-
-.welcome {
-  padding-left: 10px;
-  padding-right: 10px;
+.hero_btn {
+  width: 120px;
 }
+
+/* WELCOME SECTION */
 
 .welcome img {
   display: none;
@@ -221,6 +218,36 @@ header {
 
 .welcome p {
   margin-bottom: 2rem;
+}
+
+.welcome_btn {
+  width: 180px;
+}
+
+/* SERVICE SECTION */
+.services {
+  background-color: var(--bg-light);
+}
+
+.service {
+  margin-bottom: 4rem;
+}
+
+.service:last-child {
+  margin: 0;
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  margin: 1rem 0 2rem;
+}
+
+.service .service_btn {
+  width: 180px;
 }
 
 @media (min-width: 576px) {
@@ -324,5 +351,42 @@ header {
   .welcome {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .services {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: #fff;
+  }
+
+  .service {
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--bg-dark);
+    box-shadow: 10px 10px 10px var(--bg-dark);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .service h3 {
+    text-align: center;
+  }
+
+  .service img {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .service_btn {
+    align-self: center;
+    justify-self: end;
   }
 }
