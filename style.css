@@ -242,12 +242,77 @@ header {
   margin-bottom: 1rem;
 }
 
+.service img {
+  border-radius: 10px;
+}
+
 .service p {
   margin: 1rem 0 2rem;
 }
 
 .service .service_btn {
   width: 180px;
+}
+
+/* DIRIGENT SECTION */
+
+.dirigent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.dirigent img {
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 1rem;
+  width: 50%;
+  float: left;
+}
+
+.dirigent p {
+  margin-bottom: 1rem;
+}
+
+/* FACTS SESSION */
+.facts {
+  background-color: var(--bg-dark);
+  color: #fff;
+}
+
+.facts h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.facts p {
+  margin-bottom: 1rem;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.numbers .counter {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.numbers .counter div {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 @media (min-width: 576px) {
@@ -294,6 +359,11 @@ header {
     display: block;
     width: 50%;
     object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .dirigent .container {
+    display: flex;
   }
 }
 
@@ -366,9 +436,8 @@ header {
     width: 30%;
     padding: 10px;
     border-radius: 10px;
-    background-color: var(--bg-dark);
-    box-shadow: 10px 10px 10px var(--bg-dark);
-    color: #fff;
+    background-color: var(--bg-light);
+    box-shadow: 10px 10px 10px #d3d3d3;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -385,8 +454,16 @@ header {
     border-radius: 10px;
   }
 
+  .service p {
+    min-height: 150px;
+  }
+
   .service_btn {
     align-self: center;
-    justify-self: end;
+  }
+
+  .dirigent {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
